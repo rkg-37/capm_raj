@@ -1,4 +1,4 @@
-const cds = require('@sap/cds')
+const cds = require('@sap/cds');
  
 // The service implementation with all service handlers
 module.exports = cds.service.impl(async function() {
@@ -21,15 +21,15 @@ module.exports = cds.service.impl(async function() {
             }
  
             // set criticality for priority
-            switch (risk.prio_code) {
+            switch (risks.prio_code) {
                 case 'H':
-                    risk.PrioCriticality = 1;
+                    risks.PrioCriticality = 1;
                     break;
                 case 'M':
-                    risk.PrioCriticality = 2;
+                    risks.PrioCriticality = 2;
                     break;
                 case 'L':
-                    risk.PrioCriticality = 3;
+                    risks.PrioCriticality = 3;
                     break;
                 default:
                     break;
